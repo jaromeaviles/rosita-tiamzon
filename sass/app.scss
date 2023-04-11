@@ -1,0 +1,227 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  color: #222222;
+  margin-bottom: 20px;
+}
+
+// Global Styles
+
+.btn {
+  border-radius: 30px;
+  font-weight: 700;
+  text-transform: capitalize;
+  font-size: 16px;
+}
+
+.btn-light {
+  background-color: white;
+  color: #222222;
+}
+
+.btn-dark {
+  background-color: #222222;
+  color: white;
+}
+
+.gray-wrapper {
+  background-image: url("../images/bg/checkered-light-emboss.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+.spacer {
+  padding: 110px 0;
+}
+
+.hero-container,
+.inner-hero-container {
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+
+    h1,
+    h2 {
+      color: white;
+      font-size: 55px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+      margin-bottom: 45px;
+    }
+
+    h2 {
+      margin-bottom: 0;
+      font-size: 40px;
+    }
+  }
+}
+
+.inner-hero-image {
+  img {
+    height: 40vh;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+// Navigation
+
+.navbar {
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  .navbar-brand {
+    font-size: 16px;
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+
+  .nav-item {
+    margin-right: 10px;
+  }
+}
+
+// Homepage
+
+.hero-container {
+  position: relative;
+  height: auto;
+
+  .hero-image {
+    img {
+      height: 100vh;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .hero-text {
+    .btn-light {
+      margin-right: 20px;
+    }
+  }
+}
+
+// Blogs
+
+.blogs {
+  .featured {
+    margin-top: 150px;
+    padding-left: 125px;
+
+    h3 {
+      font-size: 16px;
+    }
+    p {
+      font-size: 14px;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+// About
+
+.about {
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+
+  .header {
+    justify-content: center;
+    margin-top: -123px;
+
+    h2 {
+      margin-bottom: 0;
+    }
+  }
+
+  .header,
+  .content {
+    display: flex;
+    align-items: center;
+  }
+}
+
+// Contact
+
+.contact {
+  .contact-container {
+    padding-right: 70px;
+    .fa-phone,
+    .fa-envelope {
+      font-size: 18px;
+      color: #222222;
+    }
+
+    .contact-info {
+      margin-left: 10px;
+      font-size: 16px;
+    }
+  }
+  .social-media {
+    i {
+      font-size: 20px;
+
+      &.fa-facebook {
+        color: #1877f2;
+      }
+
+      &.fa-twitter {
+        color: #1da1f2;
+      }
+
+      &.fa-instagram {
+        color: #e4405f;
+      }
+    }
+  }
+  h3 {
+    font-size: 20px;
+  }
+}
+
+// Footer
+
+footer {
+  background-color: #222222;
+  width: 100%;
+  padding: 10px 0;
+  p {
+    color: white;
+    margin-bottom: 0;
+    font-size: 12px;
+  }
+}
