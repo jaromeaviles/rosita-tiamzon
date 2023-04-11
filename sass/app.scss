@@ -49,7 +49,7 @@ h6 {
 }
 
 .spacer {
-  padding: 110px 0;
+  padding: 70px 0;
 }
 
 .hero-container,
@@ -71,17 +71,11 @@ h6 {
     text-align: center;
     z-index: 1;
 
-    h1,
-    h2 {
+    h1 {
       color: white;
       font-size: 55px;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
       margin-bottom: 45px;
-    }
-
-    h2 {
-      margin-bottom: 0;
-      font-size: 40px;
     }
   }
 }
@@ -133,20 +127,64 @@ h6 {
   }
 }
 
-// Blogs
+// Collections
 
-.blogs {
-  .featured {
-    margin-top: 150px;
-    padding-left: 125px;
+.collections {
+  p {
+    margin-bottom: 50px;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    /* Add transition for smooth animation */
+    transition: transform 0.3s ease-in-out;
 
-    h3 {
-      font-size: 16px;
+    &:hover {
+      /* Apply zoom effect on hover */
+      transform: scale(1.2);
     }
-    p {
-      font-size: 14px;
-      margin-bottom: 50px;
+  }
+  .img-featured-cont {
+    padding: 0 15px;
+
+    &.below img {
+      height: 270px;
+      object-fit: cover;
     }
+  }
+}
+
+// banner
+
+.home-banner-wrapper {
+  background-image: url("../images/nature.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+
+  h2,
+  p {
+    text-align: center;
+    color: white;
+  }
+
+  h2 {
+    font-size: 45px;
+  }
+
+  p {
+    width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -156,6 +194,9 @@ h6 {
   img {
     width: 100%;
     height: 100%;
+    display: block; /* Make sure the image is a block-level element */
+    height: auto; /* Set the height of the image as needed */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4); /* Add the shadow effect */
     border-radius: 50%;
   }
 
@@ -163,7 +204,7 @@ h6 {
     justify-content: center;
     margin-top: -123px;
 
-    h2 {
+    h1 {
       margin-bottom: 0;
     }
   }
