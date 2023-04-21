@@ -41,8 +41,9 @@ a {
 }
 
 .btn-dark {
-  background-color: #222222;
+  background-color: rgba(34, 34, 34, 0.9411764706);
   color: white;
+  transition: 0.5s ease-in-out;
 }
 
 .gray-wrapper {
@@ -128,14 +129,12 @@ a {
 }
 .hero-container .hero-image img {
   height: 100%;
+  width: 100%;
 }
 @media (max-width: 991px) {
   .hero-container .hero-image {
     margin-top: 50px;
   }
-}
-.hero-container .hero-image img {
-  width: 100%;
 }
 .hero-container .hero-text {
   width: auto;
