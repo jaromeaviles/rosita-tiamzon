@@ -41,6 +41,13 @@
       referrerpolicy="no-referrer"
     />
 
+      <!-- Imports Animate CSS -->
+
+      <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
     <!-- Imports CSS -->
     <link rel="stylesheet" href="dist/styles/app.css" />
   </head>
@@ -97,14 +104,15 @@
 
 <div class="container spacer about" id="about">
     <div class="row">
-        <div class="col-4">
-          <img src="dist/images/rosita2.jpg" alt="rosita" class="img-fluid">
+        <div class="col-lg-4 col-12">
+          <img src="dist/images/rosita2.jpg" alt="rosita" class="img-fluid wow animate__animated animate__fadeIn" 
+          data-wow-duration="1s" data-wow-delay="0.5s">
         </div>
-        <div class="col-4 header">
-          <h1>About Me</h1>
+        <div class="col-lg-4 col-12 header">
+          <h1 class="wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">About Me</h1>
         </div>
-        <div class="col-4 content">
-          <p>Hi there! I'm [Your Name], and I'm passionate about [Your Interests/Niche]. Welcome to my blog, where I share my thoughts, experiences, and insights on [Your Blog's Focus]. I hope to inspire and empower you through my content. Let's embark on this exciting journey together!</p>
+        <div class="col-lg-4 col-12 content">
+          <p class="wow animate__animated animate__fadeInRight" data-wow-duration="1s" data-wow-delay="2s">Hi there! I'm [Your Name], and I'm passionate about [Your Interests/Niche]. Welcome to my blog, where I share my thoughts, experiences, and insights on [Your Blog's Focus]. I hope to inspire and empower you through my content. Let's embark on this exciting journey together!</p>
         </div>
       </div>
     </div>
@@ -113,7 +121,7 @@
     <footer>
       <div class="container">
         <div class="row">
-          <div class="col-12 p-0">
+          <div class="col-12 p-lg-0">
             <p>© Copyright 2023 - Rosita Tiamzon</p>
           </div>
         </div>

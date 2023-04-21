@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Rosita Tiamzon</title>
 
     <!-- Favicon -->
@@ -39,6 +40,13 @@
       integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
+    />
+
+    <!-- Imports Animate CSS -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
 
     <!-- Imports CSS -->
@@ -86,18 +94,20 @@
       <div class="row">
         <div class="col-lg-12 hero-container">
           <div class="hero-image">
-            <img src="dist/images/rosita3-cropped.png" alt="rosita image" />
+            <img src="dist/images/profile2.png" alt="rosita image" class="wow animate__animated animate__fadeIn" 
+            data-wow-duration="1s" data-wow-delay="0.5s" />
           </div>
-          <!-- <div class="hero-overlay"></div> -->
           <div class="hero-text">
-            <h1>Step into Your Greatness. <br />Ignite Your Soul.</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-              repellat aliquid recusandae delectus nemo doloribus deleniti sint.
-              Nemo voluptate, ut quaerat veniam molestiae et quisquam
-              repellendus voluptates! Animi, tempora sed.
-            </p>
-            <a href="contact.php" class="btn btn-primary btn-dark"
+            <div class="wow animate__animated animate__fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+              <h1>Step into Your Greatness. <br />Ignite Your Soul.</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                repellat aliquid recusandae delectus nemo doloribus deleniti sint.
+                Nemo voluptate, ut quaerat veniam molestiae et quisquam
+                repellendus voluptates! Animi, tempora sed.
+              </p>
+            </div>
+            <a href="contact.php" class="btn btn-primary btn-dark wow animate__animated animate__fadeInUp" data-wow-duration="2s" data-wow-delay="0.5s"
               >Contact Me</a
             >
           </div>
@@ -109,14 +119,16 @@
     <div class="events-wrapper">
       <div class="container spacer events" id="events">
         <div class="row">
-          <div class="col-6">
-            <h2>Events</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
-              provident blanditiis odit deleniti numquam veniam enim voluptates
-              neque et voluptatem aliquam voluptatibus consequatur aliquid
-              inventore commodi temporibus, animi, recusandae quos?
-            </p>
+          <div class="col-lg-6 col-12">
+            <div class="wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay="1.5s">
+              <h2>Events</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+                provident blanditiis odit deleniti numquam veniam enim voluptates
+                neque et voluptatem aliquam voluptatibus consequatur aliquid
+                inventore commodi temporibus, animi, recusandae quos?
+              </p>
+          </div>
           </div>
         </div>
         <div class="row img-featured-cont">
@@ -147,7 +159,7 @@
       <div class="hero-overlay"></div>
       <div class="container">
         <div class="row">
-          <div class="col-12">
+          <div class="col-12 wow animate__animated animate__fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
             <h2>Lorem Ipsum</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -163,7 +175,7 @@
     <footer>
       <div class="container">
         <div class="row">
-          <div class="col-12 p-0">
+          <div class="col-12 p-lg-0">
             <p>© Copyright 2023 - Rosita Tiamzon</p>
           </div>
         </div>
@@ -176,6 +188,13 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Imports WOW JS -->
+
+    <script src="vendor/WOW-master/dist/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
 
     <!-- Imports JS -->
 
