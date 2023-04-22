@@ -126,11 +126,16 @@ a {
 // Homepage
 
 .hero-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 50px;
-  flex-direction: column-reverse;
+
+  >.row {
+    @include breakpoint("mobile") {
+      display: flex;
+      align-items: center;
+      padding-top: 50px;
+      flex-direction: column-reverse;
+    }
+  }
+  
 
   @include breakpoint("desktop") {
     flex-direction: row;
@@ -148,12 +153,16 @@ a {
     }
   }
 
+  .hero-text-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .hero-text {
     width: auto;
     text-align: center;
     @include breakpoint("desktop") {
-      padding-left: 50px;
-      width: 50%;
       text-align: left;
       padding-bottom: 30px;
     }

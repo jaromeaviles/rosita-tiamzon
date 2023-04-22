@@ -111,12 +111,13 @@ a {
   font-size: 14px;
 }
 
-.hero-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 50px;
-  flex-direction: column-reverse;
+@media (max-width: 991px) {
+  .hero-container > .row {
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+    flex-direction: column-reverse;
+  }
 }
 @media (min-width: 992px) {
   .hero-container {
@@ -136,14 +137,17 @@ a {
     margin-top: 50px;
   }
 }
+.hero-container .hero-text-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .hero-container .hero-text {
   width: auto;
   text-align: center;
 }
 @media (min-width: 992px) {
   .hero-container .hero-text {
-    padding-left: 50px;
-    width: 50%;
     text-align: left;
     padding-bottom: 30px;
   }
