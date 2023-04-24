@@ -4,7 +4,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Outfit', sans-serif;
 }
 
 body {
@@ -17,9 +17,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Merriweather", serif;
+  font-family: 'Karla', sans-serif;
   font-weight: 700;
   color: #222222;
+  letter-spacing: 1px;
 }
 
 p,
@@ -65,41 +66,6 @@ a {
   }
 }
 
-.inner-hero-container {
-  .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-  }
-
-  .hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 1;
-
-    h1 {
-      color: white;
-      font-size: 55px;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-      margin-bottom: 45px;
-    }
-  }
-}
-
-.inner-hero-image {
-  img {
-    height: 40vh;
-    width: 100%;
-    object-fit: cover;
-  }
-}
-
 // Navigation
 
 .navbar {
@@ -109,7 +75,7 @@ a {
 
   .navbar-brand {
     font-size: 16px;
-    font-family: "Merriweather", serif;
+    font-family: 'Karla', sans-serif;
     font-weight: 700;
     letter-spacing: 2px;
   }
@@ -119,6 +85,9 @@ a {
 
     a {
       font-size: 14px;
+      font-family: 'Karla', sans-serif;
+      letter-spacing: 2px;
+      font-size: 17px;
     }
   }
 }
@@ -154,20 +123,40 @@ a {
   }
 
   .hero-text-cont {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include breakpoint ("desktop") {
+      display: flex;
+      align-items: center;
+    }
   }
 
   .hero-text {
     width: auto;
     text-align: center;
     @include breakpoint("desktop") {
-      text-align: left;
       padding-bottom: 30px;
+      text-align: left;
+    }
+    h1 {
+      font-size: 50px;
+      margin-bottom: 0;
+
+      @include breakpoint("medium-device") {
+        font-size: 85px;
+      }
+
+      @include breakpoint("desktop") {
+        font-size: 75px;
+      }
+
+      @media only screen and (min-width: 1920px) {
+        font-size: 120px;
+      }
     }
     p {
-      margin-bottom: 30px;
+      font-size: 30px;
+      @media only screen and (min-width: 1920px) {
+        font-size: 40px;
+      }
     }
     .btn-light {
       margin-right: 30px;
@@ -175,13 +164,13 @@ a {
   }
 }
 
-// Events
-.events-wrapper {
+// ministry
+.ministry-wrapper {
   background-image: url("../images/bg/checkered-light-emboss.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
-.events {
+.ministry {
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
@@ -214,7 +203,7 @@ a {
 
 // banner
 
-.home-banner-wrapper {
+.cta-wrapper {
   background-image: url("../images/nature.jpg");
   background-attachment: fixed;
   background-size: cover;
@@ -233,10 +222,33 @@ a {
   p {
     width: 100%;
     margin: 0 auto;
+    font-size: 20px;
     @include breakpoint("desktop") {
       width: 800px;
     }
   }
+
+  .cta-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+    a {
+      text-align: center;
+      background-color: transparent;
+      border: 1px solid white;
+      color: white;
+      transition: 0.5s ease-in-out;
+
+      &:hover {
+        background-color: #222222;
+        border: 1px solid transparent;
+      }
+    }
+
+  }
+
+  
 
   .hero-overlay {
     position: absolute;
@@ -251,6 +263,7 @@ a {
 // About
 
 .about {
+  height: 100vh;
   img {
     width: 100%;
     height: 500px;
@@ -289,6 +302,7 @@ a {
 // Contact
 
 .contact {
+  height: 100vh;
   @include breakpoint("mobile") {
     flex-direction: column-reverse;
   }
@@ -317,8 +331,17 @@ a {
   .social-media {
     margin-top: 20px;
 
+    a {
+      display: inline-block;
+      padding: 0 3px;
+
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+
     i {
-      font-size: 20px;
+      font-size: 30px;
 
       &.fa-facebook {
         color: #1877f2;
@@ -353,6 +376,7 @@ footer {
   p {
     color: white;
     margin-bottom: 0;
-    font-size: 12px;
+    font-size: 14px;
+    font-family: 'Karla', sans-serif;
   }
 }
