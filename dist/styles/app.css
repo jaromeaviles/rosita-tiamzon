@@ -96,7 +96,6 @@ a {
 @media (min-width: 992px) {
   .hero-container {
     flex-direction: row;
-    padding-top: 80px;
   }
 }
 .hero-container .hero-image {
@@ -105,6 +104,18 @@ a {
 .hero-container .hero-image img {
   height: 100%;
   width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (min-width: 992px) {
+  .hero-container .hero-image img {
+    height: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .hero-container .hero-image img {
+    height: 75vh;
+  }
 }
 @media (max-width: 991px) {
   .hero-container .hero-image {

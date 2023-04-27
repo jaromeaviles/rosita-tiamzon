@@ -108,7 +108,6 @@ a {
 
   @include breakpoint("desktop") {
     flex-direction: row;
-    padding-top: 80px;
   }
 
   .hero-image {
@@ -116,6 +115,15 @@ a {
     img {
       height: 100%;
       width: 100%;
+      object-fit: contain;
+
+      @include breakpoint("desktop") {
+        height: 100%;
+      }
+
+      @include breakpoint("desktop-large") {
+        height: 75vh;
+      }
     }
     @include breakpoint("mobile") {
       margin-top: 50px;
