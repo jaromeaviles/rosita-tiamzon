@@ -2,7 +2,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 
 body {
@@ -15,9 +15,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Merriweather", serif;
+  font-family: "Karla", sans-serif;
   font-weight: 700;
   color: #222222;
+  letter-spacing: 1px;
 }
 
 p,
@@ -63,36 +64,6 @@ a {
   }
 }
 
-.inner-hero-container .hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-.inner-hero-container .hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: 1;
-}
-.inner-hero-container .hero-text h1 {
-  color: white;
-  font-size: 55px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-  margin-bottom: 45px;
-}
-
-.inner-hero-image img {
-  height: 40vh;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .navbar {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -100,7 +71,7 @@ a {
 }
 .navbar .navbar-brand {
   font-size: 16px;
-  font-family: "Merriweather", serif;
+  font-family: "Karla", sans-serif;
   font-weight: 700;
   letter-spacing: 2px;
 }
@@ -109,6 +80,9 @@ a {
 }
 .navbar .nav-item a {
   font-size: 14px;
+  font-family: "Karla", sans-serif;
+  letter-spacing: 2px;
+  font-size: 17px;
 }
 
 @media (max-width: 991px) {
@@ -122,7 +96,6 @@ a {
 @media (min-width: 992px) {
   .hero-container {
     flex-direction: row;
-    padding-top: 80px;
   }
 }
 .hero-container .hero-image {
@@ -131,16 +104,29 @@ a {
 .hero-container .hero-image img {
   height: 100%;
   width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (min-width: 992px) {
+  .hero-container .hero-image img {
+    height: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .hero-container .hero-image img {
+    height: 75vh;
+  }
 }
 @media (max-width: 991px) {
   .hero-container .hero-image {
     margin-top: 50px;
   }
 }
-.hero-container .hero-text-cont {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@media (min-width: 992px) {
+  .hero-container .hero-text-cont {
+    display: flex;
+    align-items: center;
+  }
 }
 .hero-container .hero-text {
   width: auto;
@@ -148,79 +134,120 @@ a {
 }
 @media (min-width: 992px) {
   .hero-container .hero-text {
-    text-align: left;
     padding-bottom: 30px;
+    text-align: left;
+  }
+}
+.hero-container .hero-text h1 {
+  font-size: 50px;
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .hero-container .hero-text h1 {
+    font-size: 85px;
+  }
+}
+@media (min-width: 992px) {
+  .hero-container .hero-text h1 {
+    font-size: 75px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .hero-container .hero-text h1 {
+    font-size: 120px;
   }
 }
 .hero-container .hero-text p {
-  margin-bottom: 30px;
+  font-size: 30px;
+}
+@media only screen and (min-width: 1920px) {
+  .hero-container .hero-text p {
+    font-size: 40px;
+  }
 }
 .hero-container .hero-text .btn-light {
   margin-right: 30px;
 }
 
-.events-wrapper {
+.ministry-wrapper {
   background-image: url("../images/bg/checkered-light-emboss.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.events {
+.ministry {
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
 }
 @media (min-width: 992px) {
-  .events {
+  .ministry {
     text-align: left;
   }
 }
-.events p {
+.ministry p {
   margin-bottom: 50px;
 }
-.events img {
+.ministry img {
   width: 100%;
   height: 100%;
   /* Add transition for smooth animation */
   transition: transform 0.3s ease-in-out;
 }
-.events img:hover {
+.ministry img:hover {
   /* Apply zoom effect on hover */
   transform: scale(1.2);
 }
-.events .img-featured-cont {
+.ministry .img-featured-cont {
   padding: 0 15px;
 }
-.events .img-featured-cont.below img {
+.ministry .img-featured-cont.below img {
   height: 270px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.home-banner-wrapper {
+.cta-wrapper {
   background-image: url("../images/nature.jpg");
   background-attachment: fixed;
   background-size: cover;
   position: relative;
 }
-.home-banner-wrapper h2,
-.home-banner-wrapper p {
+.cta-wrapper h2,
+.cta-wrapper p {
   text-align: center;
   color: white;
 }
-.home-banner-wrapper h2 {
+.cta-wrapper h2 {
   font-size: 45px;
 }
-.home-banner-wrapper p {
+.cta-wrapper p {
   width: 100%;
   margin: 0 auto;
+  font-size: 20px;
 }
 @media (min-width: 992px) {
-  .home-banner-wrapper p {
+  .cta-wrapper p {
     width: 800px;
   }
 }
-.home-banner-wrapper .hero-overlay {
+.cta-wrapper .cta-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.cta-wrapper .cta-btn a {
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  transition: 0.5s ease-in-out;
+}
+.cta-wrapper .cta-btn a:hover {
+  background-color: #222222;
+  border: 1px solid transparent;
+}
+.cta-wrapper .hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -229,6 +256,9 @@ a {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+.about {
+  height: 100vh;
+}
 .about img {
   width: 100%;
   height: 500px;
@@ -267,6 +297,9 @@ a {
   }
 }
 
+.contact {
+  height: 100vh;
+}
 @media (max-width: 991px) {
   .contact {
     flex-direction: column-reverse;
@@ -298,8 +331,15 @@ a {
 .contact .social-media {
   margin-top: 20px;
 }
+.contact .social-media a {
+  display: inline-block;
+  padding: 0 3px;
+}
+.contact .social-media a:first-child {
+  padding-left: 0;
+}
 .contact .social-media i {
-  font-size: 20px;
+  font-size: 30px;
 }
 .contact .social-media i.fa-facebook {
   color: #1877f2;
@@ -328,5 +368,6 @@ footer {
 footer p {
   color: white;
   margin-bottom: 0;
-  font-size: 12px;
+  font-size: 14px;
+  font-family: "Karla", sans-serif;
 }/*# sourceMappingURL=app.css.map */
